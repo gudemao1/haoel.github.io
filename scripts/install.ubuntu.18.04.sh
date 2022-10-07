@@ -135,7 +135,7 @@ install_gost() {
 
     sudo docker run -d --name gost \
         -v ${CERT_DIR}:${CERT_DIR}:ro \
-        --net=host ginuerzh/gost \
+        --net=host gogost/gost \
         -L "http2://${USER}:${PASS}@${BIND_IP}:${PORT}?cert=${CERT}&key=${KEY}&probe_resist=code:400&knock=www.google.com"
 }
 
